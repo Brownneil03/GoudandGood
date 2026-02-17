@@ -13,7 +13,7 @@
 // Helper functions pour générer les URLs de recherche
 const jumia = (q: string) => `https://www.jumia.ma/catalog/?q=${q.replace(/ /g, "+")}`;
 const amazon = (q: string) => `https://www.amazon.fr/s?k=${q.replace(/ /g, "+")}&tag=goudgood21-21`;
-const aliexpress = (q: string) => `https://fr.aliexpress.com/w/wholesale-${q.replace(/ /g, "-")}.html`;
+const aliexpress = (q: string) => `https://fr.aliexpress.com/w/wholesale-${q.replace(/ /g, "-")}.html?spm=a2g0o.home.1000002.1.1234&aff_trace_key=goudgood`;
 
 export const affiliateLinks: Record<string, string> = {
   // ============================================================
