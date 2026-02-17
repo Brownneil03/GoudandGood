@@ -77,7 +77,7 @@ export default function AProposPage() {
         </p>
         <div className="flex gap-4 mt-4">
           <a
-            href="https://facebook.com/goudandgood"
+            href="https://www.facebook.com/profile.php?id=61588100503182"
             className="text-emerald-600 hover:text-emerald-700"
           >
             Facebook

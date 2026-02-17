@@ -58,7 +58,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900">Facebook</h3>
-                  <a href="https://facebook.com/goudandgood" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                  <a href="https://www.facebook.com/profile.php?id=61588100503182" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                     @goudandgood
                   </a>
                 </div>

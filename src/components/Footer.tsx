@@ -30,7 +30,7 @@ export default function Footer() {
             {/* Social Links */}
             <div className="flex gap-4 mt-8">
               <a
-                href="https://facebook.com/goudandgood"
+                href="https://www.facebook.com/profile.php?id=61588100503182"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-xl bg-slate-800 hover:bg-emerald-600 text-slate-400 hover:text-white flex items-center justify-center transition-all duration-300"
