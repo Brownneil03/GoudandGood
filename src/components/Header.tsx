@@ -36,15 +36,23 @@ export default function Header() {
         <div className="flex justify-between h-16 lg:h-18">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center group">
+            <Link href="/" className="flex items-center gap-3 group">
               <Image 
                 src="/logo.png" 
-                alt="Goud&Good - Comparateur Tech Maroc" 
-                width={180} 
+                alt="Goud&Good" 
+                width={50} 
                 height={50}
-                className="h-12 w-auto object-contain"
+                className="h-11 w-auto object-contain"
                 priority
               />
+              <div className="flex flex-col">
+                <span className="text-xl font-bold text-slate-900 tracking-tight">
+                  Goud<span className="text-emerald-600">&</span>Good
+                </span>
+                <span className="text-[10px] text-slate-500 font-medium -mt-1 hidden sm:block">
+                  Guide Tech Maroc
+                </span>
+              </div>
             </Link>
           </div>
 
