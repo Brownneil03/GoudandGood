@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function Header() {
@@ -35,18 +36,15 @@ export default function Header() {
         <div className="flex justify-between h-16 lg:h-18">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center shadow-lg shadow-emerald-500/20 group-hover:shadow-emerald-500/40 transition-shadow">
-                <span className="text-white font-bold text-lg">G</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold text-slate-900 tracking-tight">
-                  Goud<span className="text-emerald-600">&</span>Good
-                </span>
-                <span className="text-[10px] text-slate-500 font-medium -mt-1 hidden sm:block">
-                  Guide Tech Maroc
-                </span>
-              </div>
+            <Link href="/" className="flex items-center group">
+              <Image 
+                src="/logo.png" 
+                alt="Goud&Good - Comparateur Tech Maroc" 
+                width={180} 
+                height={50}
+                className="h-12 w-auto object-contain"
+                priority
+              />
             </Link>
           </div>
 
