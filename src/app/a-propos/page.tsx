@@ -83,7 +83,7 @@ export default function AProposPage() {
             Facebook
           </a>
           <a
-            href="https://instagram.com/goudandgood"
+            href="https://www.instagram.com/goudandgood/"
             className="text-emerald-600 hover:text-emerald-700"
           >
             Instagram

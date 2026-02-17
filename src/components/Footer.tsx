@@ -41,7 +41,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://instagram.com/goudandgood"
+                href="https://www.instagram.com/goudandgood/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-xl bg-slate-800 hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-500 text-slate-400 hover:text-white flex items-center justify-center transition-all duration-300"
