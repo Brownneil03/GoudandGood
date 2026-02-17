@@ -11,7 +11,7 @@ interface SEOConfig {
   modifiedTime?: string;
 }
 
-const baseUrl = "https://guideachatmaroc.vercel.app";
+const baseUrl = "https://goudand-good.vercel.app";
 const siteName = "Goud&Good";
 
 /**

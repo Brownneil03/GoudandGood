@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://guideachatmaroc.vercel.app"),
+  metadataBase: new URL("https://goudand-good.vercel.app"),
   title: {
     default: "Goud&Good | Comparatifs et Guides d'Achat Tech au Maroc",
     template: "%s | Goud&Good",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_MA",
-    url: "https://guideachatmaroc.vercel.app",
+    url: "https://goudand-good.vercel.app",
     siteName: "Goud&Good",
     title: "Goud&Good | Comparatifs Tech au Maroc",
     description:
@@ -56,9 +56,9 @@ export const metadata: Metadata = {
     // Image générée dynamiquement par opengraph-image.tsx
   },
   alternates: {
-    canonical: "https://guideachatmaroc.vercel.app",
+    canonical: "https://goudand-good.vercel.app",
     languages: {
-      "fr-MA": "https://guideachatmaroc.vercel.app",
+      "fr-MA": "https://goudand-good.vercel.app",
     },
   },
   robots: {

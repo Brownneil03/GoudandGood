@@ -7,7 +7,7 @@ import { MetadataRoute } from "next";
  * URL: /sitemap.xml
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://guideachatmaroc.vercel.app";
+  const baseUrl = "https://goudand-good.vercel.app";
 
   // Pages statiques
   const staticPages = [

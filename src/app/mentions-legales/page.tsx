@@ -30,12 +30,12 @@ export default function MentionsLegalesPage() {
           <div className="prose prose-lg max-w-none">
             <h2>1. Éditeur du site</h2>
             <p>
-              Le site <strong>Goud&Good</strong> (guideachatmaroc.vercel.app) est édité par un 
+              Le site <strong>Goud&Good</strong> (goudand-good.vercel.app) est édité par un 
               particulier dans le cadre d'une activité de création de contenu.
             </p>
             <ul>
               <li><strong>Nom du site :</strong> Goud&Good</li>
-              <li><strong>URL :</strong> guideachatmaroc.vercel.app</li>
+              <li><strong>URL :</strong> goudand-good.vercel.app</li>
               <li><strong>Email :</strong> contact@goudandgood.ma</li>
             </ul>
 
