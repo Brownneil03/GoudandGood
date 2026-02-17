@@ -463,6 +463,24 @@ export const affiliateLinks: Record<string, string> = {
   "lenovo-laptop-aliexpress": "https://s.click.aliexpress.com/e/_c3enbwz1",
   "lenovo-laptop": jumia("lenovo laptop"),
   
+  // --- Apple ---
+  "macbook-air-jumia": jumia("macbook air"),
+  "macbook-air-amazon": amazon("macbook air m2"),
+  "macbook-air-aliexpress": "https://s.click.aliexpress.com/e/_c3LgGUMn",
+  "macbook-air": amazon("macbook air m2"),
+  "macbook-air-m2-jumia": jumia("macbook air m2"),
+  "macbook-air-m2-amazon": amazon("macbook air m2"),
+  "macbook-air-m2-aliexpress": "https://s.click.aliexpress.com/e/_c3LgGUMn",
+  "macbook-air-m2": amazon("macbook air m2"),
+  "airpods-pro-jumia": jumia("airpods pro"),
+  "airpods-pro-amazon": amazon("airpods pro 2"),
+  "airpods-pro-aliexpress": "https://s.click.aliexpress.com/e/_c3EKhiB5",
+  "airpods-pro": amazon("airpods pro 2"),
+  "airpods-pro-2-jumia": jumia("airpods pro 2"),
+  "airpods-pro-2-amazon": amazon("airpods pro 2"),
+  "airpods-pro-2-aliexpress": "https://s.click.aliexpress.com/e/_c3EKhiB5",
+  "airpods-pro-2": amazon("airpods pro 2"),
+  
   // ============================================================
   // CATÉGORIES
   // ============================================================
