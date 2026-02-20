@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import GoogleAdsense from "@/components/GoogleAdsense";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -87,6 +88,7 @@ export default function RootLayout({
     <html lang="fr">
       <body className={`${inter.variable} antialiased bg-white text-gray-900`}>
         <GoogleAnalytics />
+        <GoogleAdsense />
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
