@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import Script from "next/script";
 import { ComparisonTable, MultiStoreButtons } from "@/components";
 import { generateArticleSchema, generateFAQSchema } from "@/lib/seo";
@@ -29,7 +28,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=samsung+galaxy+a55",
     badge: "Meilleur choix",
     rating: 4.7,
-    image: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400&h=400&fit=crop",
     specs: {
       ecran: '6.6" Super AMOLED 120Hz',
       processeur: "Exynos 1480",
@@ -47,7 +45,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=poco+x6+pro",
     badge: "Meilleur pour gaming",
     rating: 4.6,
-    image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400&h=400&fit=crop",
     specs: {
       ecran: '6.67" AMOLED 120Hz',
       processeur: "Dimensity 8300 Ultra",
@@ -64,7 +61,6 @@ const products = [
     price: 4199,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=xiaomi+13+lite",
     rating: 4.5,
-    image: "https://images.unsplash.com/photo-1592286927505-1def25115558?w=400&h=400&fit=crop",
     specs: {
       ecran: '6.55" AMOLED 120Hz',
       processeur: "Snapdragon 7 Gen 1",
@@ -81,7 +77,6 @@ const products = [
     price: 4799,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=realme+gt+2+pro",
     rating: 4.4,
-    image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=400&fit=crop",
     specs: {
       ecran: '6.7" AMOLED 2K 120Hz',
       processeur: "Snapdragon 8 Gen 1",
@@ -98,7 +93,6 @@ const products = [
     price: 4499,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=oneplus+nord+3",
     rating: 4.5,
-    image: "https://images.unsplash.com/photo-1605236453806-6ff36851218e?w=400&h=400&fit=crop",
     specs: {
       ecran: '6.74" Fluid AMOLED 120Hz',
       processeur: "Dimensity 9000",
@@ -283,29 +277,23 @@ export default function ArticlePage() {
             {products.map((product, index) => (
               <div
                 key={product.name}
-                className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
+                className="bg-white border border-gray-200 rounded-xl p-6"
               >
-                <div className="flex flex-col md:flex-row gap-6">
-                  <div className="relative w-full md:w-48 h-48 flex-shrink-0">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-cover rounded-lg"
-                    />
-                    <div className="absolute top-2 left-2 bg-emerald-600 text-white text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center">
-                      {index + 1}
-                    </div>
-                    {product.badge && (
-                      <div className="absolute top-2 right-2 bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded">
-                        {product.badge}
-                      </div>
-                    )}
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold text-xl flex-shrink-0">
+                    {index + 1}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      {product.name}
-                    </h3>
+                    <div className="flex items-center gap-3 mb-2">
+                      <h3 className="text-xl font-semibold text-gray-900">
+                        {product.name}
+                      </h3>
+                      {product.badge && (
+                        <span className="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded">
+                          {product.badge}
+                        </span>
+                      )}
+                    </div>
                     <p className="text-2xl font-bold text-emerald-600 mb-3">
                       {product.price.toLocaleString("fr-MA")} DH
                     </p>
