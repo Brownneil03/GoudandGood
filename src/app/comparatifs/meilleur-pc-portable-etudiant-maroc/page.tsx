@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
+import Image from "next/image";
 import { ComparisonTable, AffiliateLink, MultiStoreButtons } from "@/components";
 import { generateArticleSchema, generateFAQSchema } from "@/lib/seo";
 
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
 const products = [
   {
     name: "Lenovo IdeaPad 3 15",
+    image: "https://p1-ofp.static.pub/fes/cms/2022/08/05/xz2mfhb1dqzzcxdmj8v5kijlmrlw9r054665.png",
     price: 4999,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=lenovo+ideapad+3",
     badge: "Meilleur choix",
@@ -49,6 +51,7 @@ const products = [
   },
   {
     name: "HP 15s-eq2xxx",
+    image: "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c07962448.png",
     price: 5299,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=hp+15s",
     badge: "Fiabilité HP",
@@ -75,6 +78,7 @@ const products = [
   },
   {
     name: "ASUS VivoBook 15",
+    image: "https://dlcdnwebimgs.asus.com/gain/E5B42779-81D6-460D-978E-09A989E8501C/w717/h525",
     price: 5499,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=asus+vivobook+15",
     badge: "Meilleur écran",
@@ -101,6 +105,7 @@ const products = [
   },
   {
     name: "Acer Aspire 3",
+    image: "https://static.acer.com/up/Resource/Acer/Laptops/Aspire_3/Images/20210701/Aspire-3-A315-59-wp-logo-01.png",
     price: 4499,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=acer+aspire+3",
     badge: "Budget serré",
@@ -290,8 +295,17 @@ export default function MeilleurPCEtudiantPage() {
                   className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-700 font-bold text-xl flex-shrink-0">
-                      {index + 1}
+                    <div className="relative w-28 h-24 flex-shrink-0">
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        fill
+                        className="object-contain"
+                        sizes="112px"
+                      />
+                      <div className="absolute -top-2 -left-2 w-7 h-7 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                        {index + 1}
+                      </div>
                     </div>
 
                     <div className="flex-1">
