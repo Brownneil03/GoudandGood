@@ -20,6 +20,72 @@ export const affiliateLinks: Record<string, string> = {
   // SMARTPHONES
   // ============================================================
   
+  // --- Xiaomi Redmi 13C (Budget 1500 DH) ---
+  "xiaomi-redmi-13c-jumia": jumia("xiaomi redmi 13c"),
+  "xiaomi-redmi-13c-amazon": amazon("xiaomi redmi 13c"),
+  "xiaomi-redmi-13c-aliexpress": aliexpress("xiaomi redmi 13c"),
+  "xiaomi-redmi-13c": jumia("xiaomi redmi 13c"),
+  
+  // --- Samsung Galaxy A05s ---
+  "samsung-galaxy-a05s-jumia": jumia("samsung galaxy a05s"),
+  "samsung-galaxy-a05s-amazon": amazon("samsung galaxy a05s"),
+  "samsung-galaxy-a05s-aliexpress": aliexpress("samsung galaxy a05s"),
+  "samsung-galaxy-a05s": jumia("samsung galaxy a05s"),
+  
+  // --- Realme C67 ---
+  "realme-c67-jumia": jumia("realme c67"),
+  "realme-c67-amazon": amazon("realme c67"),
+  "realme-c67-aliexpress": aliexpress("realme c67"),
+  "realme-c67": jumia("realme c67"),
+  
+  // --- Infinix Hot 40i ---
+  "infinix-hot-40i-jumia": jumia("infinix hot 40i"),
+  "infinix-hot-40i-amazon": amazon("infinix hot 40i"),
+  "infinix-hot-40i-aliexpress": aliexpress("infinix hot 40i"),
+  "infinix-hot-40i": jumia("infinix hot 40i"),
+  
+  // --- Samsung Galaxy A55 (4000-5000 DH) ---
+  "samsung-galaxy-a55-jumia": jumia("samsung galaxy a55"),
+  "samsung-galaxy-a55-amazon": amazon("samsung galaxy a55"),
+  "samsung-galaxy-a55-aliexpress": aliexpress("samsung galaxy a55"),
+  "samsung-galaxy-a55": jumia("samsung galaxy a55"),
+  
+  // --- Xiaomi POCO X6 Pro ---
+  "xiaomi-poco-x6-pro-jumia": jumia("poco x6 pro"),
+  "xiaomi-poco-x6-pro-amazon": amazon("poco x6 pro"),
+  "xiaomi-poco-x6-pro-aliexpress": "https://s.click.aliexpress.com/e/_c2IKxGBN",
+  "xiaomi-poco-x6-pro": jumia("poco x6 pro"),
+  
+  // --- Realme GT 2 Pro ---
+  "realme-gt-2-pro-jumia": jumia("realme gt 2 pro"),
+  "realme-gt-2-pro-amazon": amazon("realme gt 2 pro"),
+  "realme-gt-2-pro-aliexpress": aliexpress("realme gt 2 pro"),
+  "realme-gt-2-pro": jumia("realme gt 2 pro"),
+  
+  // --- OnePlus Nord 3 ---
+  "oneplus-nord-3-jumia": jumia("oneplus nord 3"),
+  "oneplus-nord-3-amazon": amazon("oneplus nord 3"),
+  "oneplus-nord-3-aliexpress": aliexpress("oneplus nord 3"),
+  "oneplus-nord-3": amazon("oneplus nord 3"),
+  
+  // --- Realme 11 ---
+  "realme-11-jumia": jumia("realme 11"),
+  "realme-11-amazon": amazon("realme 11"),
+  "realme-11-aliexpress": aliexpress("realme 11"),
+  "realme-11": jumia("realme 11"),
+  
+  // --- Realme 11 Pro ---
+  "realme-11-pro-jumia": jumia("realme 11 pro"),
+  "realme-11-pro-amazon": amazon("realme 11 pro"),
+  "realme-11-pro-aliexpress": aliexpress("realme 11 pro"),
+  "realme-11-pro": jumia("realme 11 pro"),
+  
+  // --- Realme GT Neo 5 ---
+  "realme-gt-neo-5-jumia": jumia("realme gt neo 5"),
+  "realme-gt-neo-5-amazon": amazon("realme gt neo 5"),
+  "realme-gt-neo-5-aliexpress": aliexpress("realme gt neo 5"),
+  "realme-gt-neo-5": jumia("realme gt neo 5"),
+  
   // --- Xiaomi Redmi Note 13 ---
   "xiaomi-redmi-note-13-jumia": jumia("xiaomi redmi note 13"),
   "xiaomi-redmi-note-13-amazon": amazon("xiaomi redmi note 13"),
@@ -480,6 +546,52 @@ export const affiliateLinks: Record<string, string> = {
   "airpods-pro-2-amazon": amazon("airpods pro 2"),
   "airpods-pro-2-aliexpress": "https://s.click.aliexpress.com/e/_c3EKhiB5",
   "airpods-pro-2": amazon("airpods pro 2"),
+  
+  // ============================================================
+  // TABLETTES
+  // ============================================================
+  
+  // --- Apple iPad 10 ---
+  "apple-ipad-10e-generation-jumia": jumia("ipad 10"),
+  "apple-ipad-10e-generation-amazon": amazon("apple ipad 10"),
+  "apple-ipad-10e-generation-aliexpress": aliexpress("ipad 10 generation"),
+  "apple-ipad-10e-generation": amazon("apple ipad 10"),
+  "apple-ipad-10-jumia": jumia("ipad 10"),
+  "apple-ipad-10-amazon": amazon("apple ipad 10"),
+  "apple-ipad-10-aliexpress": aliexpress("ipad 10"),
+  "apple-ipad-10": amazon("apple ipad 10"),
+  
+  // --- Samsung Galaxy Tab A9+ ---
+  "samsung-galaxy-tab-a9-jumia": jumia("samsung galaxy tab a9+"),
+  "samsung-galaxy-tab-a9-amazon": amazon("samsung galaxy tab a9+"),
+  "samsung-galaxy-tab-a9-aliexpress": aliexpress("samsung galaxy tab a9"),
+  "samsung-galaxy-tab-a9": jumia("samsung galaxy tab a9+"),
+  
+  // --- Xiaomi Pad 6 ---
+  "xiaomi-pad-6-jumia": jumia("xiaomi pad 6"),
+  "xiaomi-pad-6-amazon": amazon("xiaomi pad 6"),
+  "xiaomi-pad-6-aliexpress": aliexpress("xiaomi pad 6"),
+  "xiaomi-pad-6": amazon("xiaomi pad 6"),
+  
+  // --- Samsung Galaxy Tab S6 Lite ---
+  "samsung-galaxy-tab-s6-lite-2024-jumia": jumia("samsung galaxy tab s6 lite"),
+  "samsung-galaxy-tab-s6-lite-2024-amazon": amazon("samsung galaxy tab s6 lite 2024"),
+  "samsung-galaxy-tab-s6-lite-2024-aliexpress": aliexpress("samsung galaxy tab s6 lite"),
+  "samsung-galaxy-tab-s6-lite-2024": jumia("samsung galaxy tab s6 lite"),
+  "samsung-galaxy-tab-s6-lite-jumia": jumia("samsung galaxy tab s6 lite"),
+  "samsung-galaxy-tab-s6-lite-amazon": amazon("samsung galaxy tab s6 lite"),
+  "samsung-galaxy-tab-s6-lite-aliexpress": aliexpress("samsung galaxy tab s6 lite"),
+  "samsung-galaxy-tab-s6-lite": jumia("samsung galaxy tab s6 lite"),
+  
+  // --- Lenovo Tab P11 ---
+  "lenovo-tab-p11-2eme-gen-jumia": jumia("lenovo tab p11"),
+  "lenovo-tab-p11-2eme-gen-amazon": amazon("lenovo tab p11 gen 2"),
+  "lenovo-tab-p11-2eme-gen-aliexpress": aliexpress("lenovo tab p11"),
+  "lenovo-tab-p11-2eme-gen": amazon("lenovo tab p11"),
+  "lenovo-tab-p11-jumia": jumia("lenovo tab p11"),
+  "lenovo-tab-p11-amazon": amazon("lenovo tab p11"),
+  "lenovo-tab-p11-aliexpress": aliexpress("lenovo tab p11"),
+  "lenovo-tab-p11": amazon("lenovo tab p11"),
   
   // ============================================================
   // CATÉGORIES
