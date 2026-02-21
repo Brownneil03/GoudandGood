@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import Script from "next/script";
 import { ComparisonTable, AffiliateLink, MultiStoreButtons } from "@/components";
 import { generateArticleSchema, generateFAQSchema } from "@/lib/seo";
@@ -28,7 +27,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=redmi+note+13+pro+plus",
     badge: "Meilleur choix",
     rating: 4.7,
-    image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400&h=400&fit=crop",
     gamme: "Milieu de gamme",
     specs: {
       ecran: '6.67" AMOLED 120Hz',
@@ -56,7 +54,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=poco+x6+pro",
     badge: "Meilleur gaming",
     rating: 4.6,
-    image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400&h=400&fit=crop",
     gamme: "Milieu de gamme",
     specs: {
       ecran: '6.67" AMOLED 120Hz',
@@ -84,7 +81,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=redmi+note+13",
     badge: "Meilleur budget",
     rating: 4.5,
-    image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400&h=400&fit=crop",
     gamme: "Entrée de gamme",
     specs: {
       ecran: '6.67" AMOLED 120Hz',
@@ -112,7 +108,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=xiaomi+14",
     badge: "Premium",
     rating: 4.8,
-    image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400&h=400&fit=crop",
     gamme: "Haut de gamme",
     specs: {
       ecran: '6.36" LTPO AMOLED 120Hz',
@@ -295,20 +290,9 @@ export default function MeilleurXiaomiPage() {
                   key={product.name}
                   className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
                 >
-                  <div className="flex flex-col md:flex-row gap-6">
-                    <div className="relative w-full md:w-48 h-48 flex-shrink-0">
-                      <Image
-                        src={product.image}
-                        alt={product.name}
-                        fill
-                        className="object-cover rounded-lg"
-                      />
-                      <div className="absolute top-2 left-2 bg-orange-600 text-white text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center">
-                        {index + 1}
-                      </div>
-                      <div className="absolute bottom-2 left-2 bg-slate-800 text-white text-xs px-2 py-1 rounded">
-                        {product.gamme}
-                      </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-orange-700 font-bold text-xl flex-shrink-0">
+                      {index + 1}
                     </div>
 
                     <div className="flex-1">
@@ -321,6 +305,9 @@ export default function MeilleurXiaomiPage() {
                             {product.badge}
                           </span>
                         )}
+                        <span className="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded">
+                          {product.gamme}
+                        </span>
                       </div>
 
                       <p className="text-2xl font-bold text-orange-600 mb-3">

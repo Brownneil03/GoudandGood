@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import Script from "next/script";
 import { ComparisonTable, AffiliateLink, MultiStoreButtons } from "@/components";
 import { generateArticleSchema, generateFAQSchema } from "@/lib/seo";
@@ -28,7 +27,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=lenovo+ideapad+3",
     badge: "Meilleur choix",
     rating: 4.6,
-    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=400&fit=crop",
     specs: {
       ecran: '15.6" FHD IPS',
       processeur: "AMD Ryzen 5 5500U",
@@ -55,7 +53,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=hp+15s",
     badge: "Fiabilité HP",
     rating: 4.5,
-    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=400&fit=crop",
     specs: {
       ecran: '15.6" FHD SVA',
       processeur: "AMD Ryzen 5 5625U",
@@ -82,7 +79,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=asus+vivobook+15",
     badge: "Meilleur écran",
     rating: 4.4,
-    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=400&fit=crop",
     specs: {
       ecran: '15.6" FHD IPS NanoEdge',
       processeur: "Intel Core i5-1235U",
@@ -109,7 +105,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=acer+aspire+3",
     badge: "Budget serré",
     rating: 4.2,
-    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=400&fit=crop",
     specs: {
       ecran: '15.6" FHD',
       processeur: "AMD Ryzen 3 5300U",
@@ -294,17 +289,9 @@ export default function MeilleurPCEtudiantPage() {
                   key={product.name}
                   className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
                 >
-                  <div className="flex flex-col md:flex-row gap-6">
-                    <div className="relative w-full md:w-48 h-48 flex-shrink-0">
-                      <Image
-                        src={product.image}
-                        alt={product.name}
-                        fill
-                        className="object-cover rounded-lg"
-                      />
-                      <div className="absolute top-2 left-2 bg-blue-600 text-white text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center">
-                        {index + 1}
-                      </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-700 font-bold text-xl flex-shrink-0">
+                      {index + 1}
                     </div>
 
                     <div className="flex-1">

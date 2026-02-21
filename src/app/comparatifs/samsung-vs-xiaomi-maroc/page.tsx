@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import Script from "next/script";
 import { AffiliateLink, MultiStoreButtons } from "@/components";
 import { generateArticleSchema, generateFAQSchema } from "@/lib/seo";
@@ -55,13 +54,11 @@ const comparisons = [
     samsung: {
       model: "Samsung Galaxy A15",
       price: 1799,
-      image: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400&h=400&fit=crop",
       specs: "4 Go RAM, 128 Go, 50 MP",
     },
     xiaomi: {
       model: "Xiaomi Redmi Note 13",
       price: 1899,
-      image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400&h=400&fit=crop",
       specs: "8 Go RAM, 128 Go, 108 MP",
     },
     winner: "xiaomi",
@@ -72,13 +69,11 @@ const comparisons = [
     samsung: {
       model: "Samsung Galaxy A54",
       price: 4499,
-      image: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400&h=400&fit=crop",
       specs: "8 Go RAM, 128 Go, 50 MP OIS",
     },
     xiaomi: {
       model: "Xiaomi 13 Lite",
       price: 3999,
-      image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400&h=400&fit=crop",
       specs: "8 Go RAM, 256 Go, 50 MP",
     },
     winner: "xiaomi",
@@ -89,13 +84,11 @@ const comparisons = [
     samsung: {
       model: "Samsung Galaxy S24 Ultra",
       price: 16499,
-      image: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400&h=400&fit=crop",
       specs: "12 Go RAM, 256 Go, 200 MP",
     },
     xiaomi: {
       model: "Xiaomi 14 Ultra",
       price: 12999,
-      image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400&h=400&fit=crop",
       specs: "16 Go RAM, 512 Go, Leica 50 MP",
     },
     winner: "draw",
@@ -275,13 +268,8 @@ export default function SamsungVsXiaomiPage() {
                     {/* Samsung */}
                     <div className={`p-6 ${comp.winner === "samsung" ? "bg-blue-50" : ""}`}>
                       <div className="flex items-center gap-4 mb-4">
-                        <div className="relative w-20 h-20 flex-shrink-0">
-                          <Image
-                            src={comp.samsung.image}
-                            alt={comp.samsung.model}
-                            fill
-                            className="object-cover rounded-lg"
-                          />
+                        <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                          <span className="text-blue-600 font-bold text-lg">S</span>
                         </div>
                         <div>
                           <p className="font-semibold text-gray-900">{comp.samsung.model}</p>
@@ -306,13 +294,8 @@ export default function SamsungVsXiaomiPage() {
                     {/* Xiaomi */}
                     <div className={`p-6 ${comp.winner === "xiaomi" ? "bg-orange-50" : ""}`}>
                       <div className="flex items-center gap-4 mb-4">
-                        <div className="relative w-20 h-20 flex-shrink-0">
-                          <Image
-                            src={comp.xiaomi.image}
-                            alt={comp.xiaomi.model}
-                            fill
-                            className="object-cover rounded-lg"
-                          />
+                        <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                          <span className="text-orange-600 font-bold text-lg">X</span>
                         </div>
                         <div>
                           <p className="font-semibold text-gray-900">{comp.xiaomi.model}</p>

@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import Script from "next/script";
 import { ComparisonTable, AffiliateLink, MultiStoreButtons } from "@/components";
 import { generateArticleSchema, generateFAQSchema } from "@/lib/seo";
@@ -28,7 +27,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=iphone+15+pro",
     badge: "Meilleure qualité vidéo",
     rating: 4.9,
-    image: "https://images.unsplash.com/photo-1592286927505-1def25115558?w=400&h=400&fit=crop",
     specs: {
       capteurPrincipal: "48 MP (f/1.78)",
       ultraGrandAngle: "12 MP (f/2.2)",
@@ -54,7 +52,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=samsung+galaxy+s24+ultra",
     badge: "Meilleur zoom",
     rating: 4.8,
-    image: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400&h=400&fit=crop",
     specs: {
       capteurPrincipal: "200 MP (f/1.7)",
       ultraGrandAngle: "12 MP (f/2.2)",
@@ -80,7 +77,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=google+pixel+8+pro",
     badge: "Meilleur rapport qualité/prix",
     rating: 4.7,
-    image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400&h=400&fit=crop",
     specs: {
       capteurPrincipal: "50 MP (f/1.68)",
       ultraGrandAngle: "48 MP (f/1.95)",
@@ -238,17 +234,9 @@ export default function MeilleurSmartphonePhotoPage() {
                   key={product.name}
                   className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
                 >
-                  <div className="flex flex-col md:flex-row gap-6">
-                    <div className="relative w-full md:w-48 h-48 flex-shrink-0">
-                      <Image
-                        src={product.image}
-                        alt={product.name}
-                        fill
-                        className="object-cover rounded-lg"
-                      />
-                      <div className="absolute top-2 left-2 bg-purple-600 text-white text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center">
-                        {index + 1}
-                      </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-700 font-bold text-xl flex-shrink-0">
+                      {index + 1}
                     </div>
 
                     <div className="flex-1">

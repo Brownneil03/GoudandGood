@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import Script from "next/script";
 import { ComparisonTable, AffiliateLink, MultiStoreButtons } from "@/components";
 import { generateArticleSchema, generateFAQSchema } from "@/lib/seo";
@@ -28,7 +27,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=asus+tuf+gaming+f15",
     badge: "Meilleur rapport qualité/prix",
     rating: 4.6,
-    image: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=400&h=400&fit=crop",
     specs: {
       ecran: '15.6" FHD 144Hz IPS',
       processeur: "Intel Core i5-12500H",
@@ -55,7 +53,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=lenovo+ideapad+gaming+3",
     badge: "Entrée de gamme gaming",
     rating: 4.4,
-    image: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=400&h=400&fit=crop",
     specs: {
       ecran: '15.6" FHD 120Hz',
       processeur: "AMD Ryzen 5 6600H",
@@ -82,7 +79,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=hp+victus+15",
     badge: "Polyvalent",
     rating: 4.5,
-    image: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=400&h=400&fit=crop",
     specs: {
       ecran: '15.6" FHD 144Hz IPS',
       processeur: "Intel Core i5-12450H",
@@ -109,7 +105,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=msi+gf63+thin",
     badge: "Le plus léger",
     rating: 4.3,
-    image: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=400&h=400&fit=crop",
     specs: {
       ecran: '15.6" FHD 144Hz',
       processeur: "Intel Core i5-11400H",
@@ -295,17 +290,9 @@ export default function MeilleurPCGamerPasCherPage() {
                   key={product.name}
                   className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
                 >
-                  <div className="flex flex-col md:flex-row gap-6">
-                    <div className="relative w-full md:w-48 h-48 flex-shrink-0">
-                      <Image
-                        src={product.image}
-                        alt={product.name}
-                        fill
-                        className="object-cover rounded-lg"
-                      />
-                      <div className="absolute top-2 left-2 bg-red-600 text-white text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center">
-                        {index + 1}
-                      </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-red-700 font-bold text-xl flex-shrink-0">
+                      {index + 1}
                     </div>
 
                     <div className="flex-1">

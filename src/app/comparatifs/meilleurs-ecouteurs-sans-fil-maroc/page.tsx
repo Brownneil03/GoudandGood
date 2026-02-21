@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import Script from "next/script";
 import { ComparisonTable, AffiliateLink, MultiStoreButtons } from "@/components";
 import { generateArticleSchema, generateFAQSchema } from "@/lib/seo";
@@ -28,7 +27,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=samsung+galaxy+buds+fe",
     badge: "Meilleur choix",
     rating: 4.6,
-    image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400&h=400&fit=crop",
     specs: {
       type: "Intra-auriculaires",
       anc: "ANC actif",
@@ -54,7 +52,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=jbl+tune+230nc",
     badge: "Meilleur son",
     rating: 4.5,
-    image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400&h=400&fit=crop",
     specs: {
       type: "Intra-auriculaires",
       anc: "ANC actif",
@@ -80,7 +77,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=xiaomi+redmi+buds+5+pro",
     badge: "Meilleur budget ANC",
     rating: 4.4,
-    image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400&h=400&fit=crop",
     specs: {
       type: "Intra-auriculaires",
       anc: "ANC 52dB",
@@ -106,7 +102,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=anker+soundcore+life+p3",
     badge: "Polyvalent",
     rating: 4.3,
-    image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400&h=400&fit=crop",
     specs: {
       type: "Intra-auriculaires",
       anc: "ANC multi-modes",
@@ -132,7 +127,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=xiaomi+redmi+buds+4+lite",
     badge: "Ultra budget",
     rating: 4.0,
-    image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400&h=400&fit=crop",
     specs: {
       type: "Semi-intra",
       anc: "Non",
@@ -316,17 +310,9 @@ export default function MeilleursEcouteursSansFilPage() {
                   key={product.name}
                   className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
                 >
-                  <div className="flex flex-col md:flex-row gap-6">
-                    <div className="relative w-full md:w-40 h-40 flex-shrink-0">
-                      <Image
-                        src={product.image}
-                        alt={product.name}
-                        fill
-                        className="object-cover rounded-lg"
-                      />
-                      <div className="absolute top-2 left-2 bg-indigo-600 text-white text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center">
-                        {index + 1}
-                      </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-700 font-bold text-xl flex-shrink-0">
+                      {index + 1}
                     </div>
 
                     <div className="flex-1">

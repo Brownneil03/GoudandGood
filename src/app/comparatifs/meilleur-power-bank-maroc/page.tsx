@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import Script from "next/script";
 import { ComparisonTable, AffiliateLink, MultiStoreButtons } from "@/components";
 import { generateArticleSchema, generateFAQSchema } from "@/lib/seo";
@@ -28,7 +27,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=anker+powercore+20000",
     badge: "Meilleur choix",
     rating: 4.7,
-    image: "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=400&h=400&fit=crop",
     specs: {
       capacite: "20 000 mAh",
       puissanceMax: "22.5W",
@@ -54,7 +52,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=xiaomi+power+bank+20000",
     badge: "Meilleur rapport qualité/prix",
     rating: 4.6,
-    image: "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=400&h=400&fit=crop",
     specs: {
       capacite: "20 000 mAh",
       puissanceMax: "22.5W",
@@ -80,7 +77,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=baseus+power+bank+30000",
     badge: "Charge laptop",
     rating: 4.5,
-    image: "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=400&h=400&fit=crop",
     specs: {
       capacite: "30 000 mAh",
       puissanceMax: "65W PD",
@@ -106,7 +102,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=xiaomi+redmi+power+bank+10000",
     badge: "Budget compact",
     rating: 4.4,
-    image: "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=400&h=400&fit=crop",
     specs: {
       capacite: "10 000 mAh",
       puissanceMax: "10W",
@@ -132,7 +127,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=anker+622+magsafe",
     badge: "iPhone MagSafe",
     rating: 4.3,
-    image: "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=400&h=400&fit=crop",
     specs: {
       capacite: "5 000 mAh",
       puissanceMax: "7.5W sans fil",
@@ -318,17 +312,9 @@ export default function MeilleurPowerBankPage() {
                   key={product.name}
                   className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
                 >
-                  <div className="flex flex-col md:flex-row gap-6">
-                    <div className="relative w-full md:w-40 h-40 flex-shrink-0">
-                      <Image
-                        src={product.image}
-                        alt={product.name}
-                        fill
-                        className="object-cover rounded-lg"
-                      />
-                      <div className="absolute top-2 left-2 bg-teal-600 text-white text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center">
-                        {index + 1}
-                      </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-700 font-bold text-xl flex-shrink-0">
+                      {index + 1}
                     </div>
 
                     <div className="flex-1">

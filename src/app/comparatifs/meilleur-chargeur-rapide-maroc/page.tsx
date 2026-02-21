@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import Script from "next/script";
 import { ComparisonTable, AffiliateLink, MultiStoreButtons } from "@/components";
 import { generateArticleSchema, generateFAQSchema } from "@/lib/seo";
@@ -28,7 +27,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=anker+735+65w",
     badge: "Meilleur choix",
     rating: 4.8,
-    image: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=400&h=400&fit=crop",
     specs: {
       puissance: "65W",
       ports: "2x USB-C + 1x USB-A",
@@ -54,7 +52,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=xiaomi+chargeur+67w",
     badge: "Meilleur rapport qualité/prix",
     rating: 4.6,
-    image: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=400&h=400&fit=crop",
     specs: {
       puissance: "67W",
       ports: "1x USB-C",
@@ -80,7 +77,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=baseus+chargeur+100w",
     badge: "Le plus puissant",
     rating: 4.5,
-    image: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=400&h=400&fit=crop",
     specs: {
       puissance: "100W",
       ports: "2x USB-C + 1x USB-A",
@@ -106,7 +102,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=anker+511+30w",
     badge: "Compact iPhone",
     rating: 4.7,
-    image: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=400&h=400&fit=crop",
     specs: {
       puissance: "30W",
       ports: "1x USB-C",
@@ -132,7 +127,6 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=ugreen+chargeur+65w",
     badge: "Bon compromis",
     rating: 4.4,
-    image: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=400&h=400&fit=crop",
     specs: {
       puissance: "65W",
       ports: "2x USB-C",
@@ -319,17 +313,9 @@ export default function MeilleurChargeurRapidePage() {
                   key={product.name}
                   className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
                 >
-                  <div className="flex flex-col md:flex-row gap-6">
-                    <div className="relative w-full md:w-40 h-40 flex-shrink-0">
-                      <Image
-                        src={product.image}
-                        alt={product.name}
-                        fill
-                        className="object-cover rounded-lg"
-                      />
-                      <div className="absolute top-2 left-2 bg-amber-600 text-white text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center">
-                        {index + 1}
-                      </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-700 font-bold text-xl flex-shrink-0">
+                      {index + 1}
                     </div>
 
                     <div className="flex-1">

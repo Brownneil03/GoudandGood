@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import Script from "next/script";
 import { MultiStoreButtons } from "@/components";
 import { generateArticleSchema, generateFAQSchema } from "@/lib/seo";
@@ -42,7 +41,6 @@ const products = [
     name: "Xiaomi Redmi Note 13 Pro",
     price: "2899 DH",
     rating: 4.8,
-    image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400&h=400&fit=crop",
     pros: ["Écran AMOLED 120Hz", "Caméra 200MP", "Charge 67W", "Design premium"],
     cons: ["Pas de prise jack", "MIUI avec pubs"],
     verdict: "Meilleur choix",
@@ -52,7 +50,6 @@ const products = [
     name: "Samsung Galaxy A35",
     price: "3199 DH",
     rating: 4.6,
-    image: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400&h=400&fit=crop",
     pros: ["One UI fluide", "5 ans de mises à jour", "Étanche IP67", "SAV Samsung Maroc"],
     cons: ["Charge lente 25W", "Plastic au dos"],
     verdict: "Fiabilité Samsung",
@@ -62,7 +59,6 @@ const products = [
     name: "Realme 12 Pro",
     price: "2799 DH",
     rating: 4.5,
-    image: "https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?w=400&h=400&fit=crop",
     pros: ["Design luxueux", "Écran incurvé", "Charge 67W", "Bonnes performances"],
     cons: ["Marque moins connue", "MAJ moins fréquentes"],
     verdict: "Meilleur rapport qualité/prix",
@@ -135,26 +131,17 @@ export default function ComparatifPage() {
           <div className="space-y-8">
             {products.map((product, index) => (
               <div key={product.name} className="border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-                <div className="flex flex-col md:flex-row gap-6">
-                  <div className="relative w-full md:w-48 h-48 flex-shrink-0">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-cover rounded-xl"
-                    />
-                    {index === 0 && (
-                      <div className="absolute top-2 left-2 px-3 py-1 bg-emerald-500 text-white text-xs font-bold rounded-full">
-                        #1 Recommandé
-                      </div>
-                    )}
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold text-xl flex-shrink-0">
+                    {index + 1}
                   </div>
                   
                   <div className="flex-1">
-                    <div className="flex items-start justify-between mb-2">
+                    <div className="flex items-center gap-3 mb-2">
                       <h3 className="text-xl font-bold text-slate-900">{product.name}</h3>
-                      <span className="text-xl font-bold text-emerald-600">{product.price}</span>
+                      <span className="px-2 py-0.5 bg-blue-100 text-blue-700 text-xs font-medium rounded">{product.verdict}</span>
                     </div>
+                    <p className="text-xl font-bold text-emerald-600 mb-3">{product.price}</p>
                     
                     <div className="flex items-center gap-1 mb-4">
                       {[...Array(5)].map((_, i) => (
@@ -163,7 +150,6 @@ export default function ComparatifPage() {
                         </svg>
                       ))}
                       <span className="ml-2 text-sm text-slate-500">{product.rating}/5</span>
-                      <span className="ml-2 px-2 py-0.5 bg-blue-100 text-blue-700 text-xs font-medium rounded">{product.verdict}</span>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-4 mb-4">
