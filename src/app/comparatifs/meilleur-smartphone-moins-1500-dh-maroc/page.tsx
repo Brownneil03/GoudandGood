@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Script from "next/script";
 import { ComparisonTable, MultiStoreButtons } from "@/components";
 import { generateArticleSchema, generateFAQSchema } from "@/lib/seo";
@@ -28,6 +29,7 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=xiaomi+redmi+13c",
     badge: "Meilleur choix",
     rating: 4.4,
+    image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400&h=400&fit=crop",
     specs: {
       ecran: '6.74" IPS 90Hz',
       processeur: "Helio G85",
@@ -44,6 +46,7 @@ const products = [
     price: 1399,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=samsung+galaxy+a05s",
     rating: 4.2,
+    image: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400&h=400&fit=crop",
     specs: {
       ecran: '6.7" PLS LCD 90Hz',
       processeur: "Snapdragon 680",
@@ -61,6 +64,7 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=realme+c67",
     badge: "Meilleur rapport qualité/prix",
     rating: 4.3,
+    image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=400&fit=crop",
     specs: {
       ecran: '6.72" IPS 90Hz',
       processeur: "Snapdragon 685",
@@ -77,6 +81,7 @@ const products = [
     price: 1199,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=infinix+hot+40i",
     rating: 4.0,
+    image: "https://images.unsplash.com/photo-1592286927505-1def25115558?w=400&h=400&fit=crop",
     specs: {
       ecran: '6.56" IPS 90Hz',
       processeur: "Helio G36",
@@ -258,23 +263,29 @@ export default function ArticlePage() {
             {products.map((product, index) => (
               <div
                 key={product.name}
-                className="bg-white border border-gray-200 rounded-xl p-6"
+                className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold text-xl flex-shrink-0">
-                    {index + 1}
+                <div className="flex flex-col md:flex-row gap-6">
+                  <div className="relative w-full md:w-48 h-48 flex-shrink-0">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className="object-cover rounded-lg"
+                    />
+                    <div className="absolute top-2 left-2 bg-emerald-600 text-white text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center">
+                      {index + 1}
+                    </div>
+                    {product.badge && (
+                      <div className="absolute top-2 right-2 bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded">
+                        {product.badge}
+                      </div>
+                    )}
                   </div>
                   <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="text-xl font-semibold text-gray-900">
-                        {product.name}
-                      </h3>
-                      {product.badge && (
-                        <span className="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded">
-                          {product.badge}
-                        </span>
-                      )}
-                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      {product.name}
+                    </h3>
                     <p className="text-2xl font-bold text-emerald-600 mb-3">
                       {product.price.toLocaleString("fr-MA")} DH
                     </p>

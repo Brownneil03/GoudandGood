@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Script from "next/script";
 import { MultiStoreButtons } from "@/components";
 import { generateArticleSchema, generateFAQSchema } from "@/lib/seo";
@@ -502,14 +503,42 @@ export default function ArticlePage() {
               <h3 className="text-lg font-bold text-emerald-800 mb-4">💰 Budget 1000-1500 DH</h3>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="bg-white p-4 rounded-lg">
-                  <p className="font-bold text-orange-700 mb-2">🏆 Notre choix : Xiaomi Redmi 13C</p>
-                  <p className="text-sm text-gray-600 mb-3">1299 DH - 6 Go RAM, 128 Go, 50 MP</p>
-                  <MultiStoreButtons productName="Xiaomi Redmi 13C" size="sm" />
+                  <div className="flex gap-4">
+                    <div className="relative w-20 h-20 flex-shrink-0">
+                      <Image
+                        src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=200&h=200&fit=crop"
+                        alt="Xiaomi Redmi 13C"
+                        fill
+                        className="object-cover rounded-lg"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-bold text-orange-700 mb-1">🏆 Notre choix : Xiaomi Redmi 13C</p>
+                      <p className="text-sm text-gray-600 mb-2">1299 DH - 6 Go RAM, 128 Go, 50 MP</p>
+                    </div>
+                  </div>
+                  <div className="mt-3">
+                    <MultiStoreButtons productName="Xiaomi Redmi 13C" size="sm" />
+                  </div>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
-                  <p className="font-bold text-yellow-700 mb-2">Alternative : Realme C67</p>
-                  <p className="text-sm text-gray-600 mb-3">1449 DH - 108 MP, charge 33W</p>
-                  <MultiStoreButtons productName="Realme C67" size="sm" />
+                  <div className="flex gap-4">
+                    <div className="relative w-20 h-20 flex-shrink-0">
+                      <Image
+                        src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=200&h=200&fit=crop"
+                        alt="Realme C67"
+                        fill
+                        className="object-cover rounded-lg"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-bold text-yellow-700 mb-1">Alternative : Realme C67</p>
+                      <p className="text-sm text-gray-600 mb-2">1449 DH - 108 MP, charge 33W</p>
+                    </div>
+                  </div>
+                  <div className="mt-3">
+                    <MultiStoreButtons productName="Realme C67" size="sm" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -518,14 +547,42 @@ export default function ArticlePage() {
               <h3 className="text-lg font-bold text-blue-800 mb-4">💰 Budget 1500-2500 DH</h3>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="bg-white p-4 rounded-lg">
-                  <p className="font-bold text-orange-700 mb-2">🏆 Notre choix : Xiaomi Redmi Note 13</p>
-                  <p className="text-sm text-gray-600 mb-3">1899 DH - AMOLED 120Hz, 8 Go RAM</p>
-                  <MultiStoreButtons productName="Xiaomi Redmi Note 13" size="sm" />
+                  <div className="flex gap-4">
+                    <div className="relative w-20 h-20 flex-shrink-0">
+                      <Image
+                        src="https://images.unsplash.com/photo-1592286927505-1def25115558?w=200&h=200&fit=crop"
+                        alt="Xiaomi Redmi Note 13"
+                        fill
+                        className="object-cover rounded-lg"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-bold text-orange-700 mb-1">🏆 Notre choix : Xiaomi Redmi Note 13</p>
+                      <p className="text-sm text-gray-600 mb-2">1899 DH - AMOLED 120Hz, 8 Go RAM</p>
+                    </div>
+                  </div>
+                  <div className="mt-3">
+                    <MultiStoreButtons productName="Xiaomi Redmi Note 13" size="sm" />
+                  </div>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
-                  <p className="font-bold text-yellow-700 mb-2">Alternative : Realme 11</p>
-                  <p className="text-sm text-gray-600 mb-3">1799 DH - Design premium, 67W</p>
-                  <MultiStoreButtons productName="Realme 11" size="sm" />
+                  <div className="flex gap-4">
+                    <div className="relative w-20 h-20 flex-shrink-0">
+                      <Image
+                        src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=200&h=200&fit=crop"
+                        alt="Realme 11"
+                        fill
+                        className="object-cover rounded-lg"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-bold text-yellow-700 mb-1">Alternative : Realme 11</p>
+                      <p className="text-sm text-gray-600 mb-2">1799 DH - Design premium, 67W</p>
+                    </div>
+                  </div>
+                  <div className="mt-3">
+                    <MultiStoreButtons productName="Realme 11" size="sm" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -534,14 +591,42 @@ export default function ArticlePage() {
               <h3 className="text-lg font-bold text-purple-800 mb-4">💰 Budget 2500-4000 DH</h3>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="bg-white p-4 rounded-lg">
-                  <p className="font-bold text-orange-700 mb-2">🏆 Notre choix : Xiaomi Redmi Note 13 Pro</p>
-                  <p className="text-sm text-gray-600 mb-3">2699 DH - 200 MP, AMOLED curvo</p>
-                  <MultiStoreButtons productName="Xiaomi Redmi Note 13 Pro" size="sm" />
+                  <div className="flex gap-4">
+                    <div className="relative w-20 h-20 flex-shrink-0">
+                      <Image
+                        src="https://images.unsplash.com/photo-1605236453806-6ff36851218e?w=200&h=200&fit=crop"
+                        alt="Xiaomi Redmi Note 13 Pro"
+                        fill
+                        className="object-cover rounded-lg"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-bold text-orange-700 mb-1">🏆 Notre choix : Xiaomi Redmi Note 13 Pro</p>
+                      <p className="text-sm text-gray-600 mb-2">2699 DH - 200 MP, AMOLED curvo</p>
+                    </div>
+                  </div>
+                  <div className="mt-3">
+                    <MultiStoreButtons productName="Xiaomi Redmi Note 13 Pro" size="sm" />
+                  </div>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
-                  <p className="font-bold text-yellow-700 mb-2">Alternative gaming : POCO X6 Pro</p>
-                  <p className="text-sm text-gray-600 mb-3">4299 DH - 12 Go RAM, Dimensity 8300</p>
-                  <MultiStoreButtons productName="POCO X6 Pro" size="sm" />
+                  <div className="flex gap-4">
+                    <div className="relative w-20 h-20 flex-shrink-0">
+                      <Image
+                        src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=200&h=200&fit=crop"
+                        alt="POCO X6 Pro"
+                        fill
+                        className="object-cover rounded-lg"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-bold text-yellow-700 mb-1">Alternative gaming : POCO X6 Pro</p>
+                      <p className="text-sm text-gray-600 mb-2">4299 DH - 12 Go RAM, Dimensity 8300</p>
+                    </div>
+                  </div>
+                  <div className="mt-3">
+                    <MultiStoreButtons productName="POCO X6 Pro" size="sm" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -550,14 +635,42 @@ export default function ArticlePage() {
               <h3 className="text-lg font-bold text-red-800 mb-4">💰 Budget 4000+ DH (haut de gamme)</h3>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="bg-white p-4 rounded-lg">
-                  <p className="font-bold text-orange-700 mb-2">🏆 Flagship : Xiaomi 13T</p>
-                  <p className="text-sm text-gray-600 mb-3">5499 DH - Leica, Dimensity 8200 Ultra</p>
-                  <MultiStoreButtons productName="Xiaomi 13T" size="sm" />
+                  <div className="flex gap-4">
+                    <div className="relative w-20 h-20 flex-shrink-0">
+                      <Image
+                        src="https://images.unsplash.com/photo-1592286927505-1def25115558?w=200&h=200&fit=crop"
+                        alt="Xiaomi 13T"
+                        fill
+                        className="object-cover rounded-lg"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-bold text-orange-700 mb-1">🏆 Flagship : Xiaomi 13T</p>
+                      <p className="text-sm text-gray-600 mb-2">5499 DH - Leica, Dimensity 8200 Ultra</p>
+                    </div>
+                  </div>
+                  <div className="mt-3">
+                    <MultiStoreButtons productName="Xiaomi 13T" size="sm" />
+                  </div>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
-                  <p className="font-bold text-yellow-700 mb-2">Meilleur rapport Q/P : Realme GT 2 Pro</p>
-                  <p className="text-sm text-gray-600 mb-3">4799 DH - Snapdragon 8 Gen 1, écran 2K</p>
-                  <MultiStoreButtons productName="Realme GT 2 Pro" size="sm" />
+                  <div className="flex gap-4">
+                    <div className="relative w-20 h-20 flex-shrink-0">
+                      <Image
+                        src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=200&h=200&fit=crop"
+                        alt="Realme GT 2 Pro"
+                        fill
+                        className="object-cover rounded-lg"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-bold text-yellow-700 mb-1">Meilleur rapport Q/P : Realme GT 2 Pro</p>
+                      <p className="text-sm text-gray-600 mb-2">4799 DH - Snapdragon 8 Gen 1, écran 2K</p>
+                    </div>
+                  </div>
+                  <div className="mt-3">
+                    <MultiStoreButtons productName="Realme GT 2 Pro" size="sm" />
+                  </div>
                 </div>
               </div>
             </div>

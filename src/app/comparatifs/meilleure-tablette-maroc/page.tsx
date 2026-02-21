@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Script from "next/script";
 import { ComparisonTable, MultiStoreButtons } from "@/components";
 import { generateArticleSchema, generateFAQSchema } from "@/lib/seo";
@@ -29,6 +30,7 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=ipad+10",
     badge: "Meilleur choix",
     rating: 4.8,
+    image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&h=400&fit=crop",
     specs: {
       ecran: '10.9" Liquid Retina',
       processeur: "Apple A14 Bionic",
@@ -46,6 +48,7 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=samsung+galaxy+tab+a9+plus",
     badge: "Meilleur rapport qualité/prix",
     rating: 4.5,
+    image: "https://images.unsplash.com/photo-1561154464-82e9adf32764?w=400&h=400&fit=crop",
     specs: {
       ecran: '11" TFT LCD 90Hz',
       processeur: "Snapdragon 695",
@@ -63,6 +66,7 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=xiaomi+pad+6",
     badge: "Meilleur écran",
     rating: 4.6,
+    image: "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=400&h=400&fit=crop",
     specs: {
       ecran: '11" LCD 144Hz',
       processeur: "Snapdragon 870",
@@ -80,6 +84,7 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=samsung+galaxy+tab+s6+lite",
     badge: "Stylus inclus",
     rating: 4.4,
+    image: "https://images.unsplash.com/photo-1632882765546-1ee75f53becb?w=400&h=400&fit=crop",
     specs: {
       ecran: '10.4" TFT LCD',
       processeur: "Snapdragon 720G",
@@ -97,6 +102,7 @@ const products = [
     affiliateUrl: "https://www.jumia.ma/catalog/?q=lenovo+tab+p11",
     badge: "Budget ultra-serré",
     rating: 4.2,
+    image: "https://images.unsplash.com/photo-1589739900266-43b2843f4c12?w=400&h=400&fit=crop",
     specs: {
       ecran: '11.5" 2K OLED',
       processeur: "Mediatek G99",
@@ -296,23 +302,29 @@ export default function ArticlePage() {
             {products.map((product, index) => (
               <div
                 key={product.name}
-                className="bg-white border border-gray-200 rounded-xl p-6"
+                className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold text-xl flex-shrink-0">
-                    {index + 1}
+                <div className="flex flex-col md:flex-row gap-6">
+                  <div className="relative w-full md:w-48 h-48 flex-shrink-0">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className="object-cover rounded-lg"
+                    />
+                    <div className="absolute top-2 left-2 bg-emerald-600 text-white text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center">
+                      {index + 1}
+                    </div>
+                    {product.badge && (
+                      <div className="absolute top-2 right-2 bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded">
+                        {product.badge}
+                      </div>
+                    )}
                   </div>
                   <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="text-xl font-semibold text-gray-900">
-                        {product.name}
-                      </h3>
-                      {product.badge && (
-                        <span className="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded">
-                          {product.badge}
-                        </span>
-                      )}
-                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      {product.name}
+                    </h3>
                     <p className="text-2xl font-bold text-emerald-600 mb-3">
                       {product.price.toLocaleString("fr-MA")} DH
                     </p>
