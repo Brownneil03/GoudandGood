@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
-import Image from "next/image";
 import { ComparisonTable, AffiliateLink, MultiStoreButtons } from "@/components";
 import { generateArticleSchema, generateFAQSchema } from "@/lib/seo";
 
@@ -24,7 +23,6 @@ export const metadata: Metadata = {
 const products = [
   {
     name: "Redmi Note 13 Pro+",
-    image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-13-pro-plus-5g.jpg",
     price: 3499,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=redmi+note+13+pro+plus",
     badge: "Meilleur choix",
@@ -52,7 +50,6 @@ const products = [
   },
   {
     name: "POCO X6 Pro",
-    image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-x6-pro.jpg",
     price: 3799,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=poco+x6+pro",
     badge: "Meilleur gaming",
@@ -80,7 +77,6 @@ const products = [
   },
   {
     name: "Redmi Note 13",
-    image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-13-4g.jpg",
     price: 1899,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=redmi+note+13",
     badge: "Meilleur budget",
@@ -108,7 +104,6 @@ const products = [
   },
   {
     name: "Xiaomi 14",
-    image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14.jpg",
     price: 9999,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=xiaomi+14",
     badge: "Premium",
@@ -296,22 +291,12 @@ export default function MeilleurXiaomiPage() {
                   className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="relative w-24 h-32 flex-shrink-0">
-                      <Image
-                        src={product.image}
-                        alt={product.name}
-                        fill
-                        className="object-contain"
-                        sizes="96px"
-                      />
-                      <div className="absolute -top-2 -left-2 w-7 h-7 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                        {index + 1}
-                      </div>
+                    <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-orange-700 font-bold text-xl flex-shrink-0">
+                      {index + 1}
                     </div>
 
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
-                        <span className="text-xs text-gray-500">{product.gamme}</span>
                         <h3 className="text-xl font-semibold text-gray-900">
                           {product.name}
                         </h3>

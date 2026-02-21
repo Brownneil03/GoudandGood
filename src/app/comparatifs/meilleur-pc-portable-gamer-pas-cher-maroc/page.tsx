@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
-import Image from "next/image";
 import { ComparisonTable, AffiliateLink, MultiStoreButtons } from "@/components";
 import { generateArticleSchema, generateFAQSchema } from "@/lib/seo";
 
@@ -24,7 +23,6 @@ export const metadata: Metadata = {
 const products = [
   {
     name: "ASUS TUF Gaming F15",
-    image: "https://dlcdnwebimgs.asus.com/gain/4C2C4A12-D265-4BF8-A8E8-3C39E1B24AF4/w717/h525",
     price: 8999,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=asus+tuf+gaming+f15",
     badge: "Meilleur rapport qualité/prix",
@@ -51,7 +49,6 @@ const products = [
   },
   {
     name: "Lenovo IdeaPad Gaming 3",
-    image: "https://p1-ofp.static.pub/fes/cms/2023/01/05/j8iupmxv0ngb48e3g2dxvnq3xz4bxu456037.png",
     price: 7999,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=lenovo+ideapad+gaming+3",
     badge: "Entrée de gamme gaming",
@@ -78,7 +75,6 @@ const products = [
   },
   {
     name: "HP Victus 15",
-    image: "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08148854.png",
     price: 9499,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=hp+victus+15",
     badge: "Polyvalent",
@@ -105,7 +101,6 @@ const products = [
   },
   {
     name: "MSI GF63 Thin",
-    image: "https://asset.msi.com/resize/image/global/product/product_6_20220119172028_61e804ec5c60b.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
     price: 7499,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=msi+gf63+thin",
     badge: "Le plus léger",
@@ -296,17 +291,8 @@ export default function MeilleurPCGamerPasCherPage() {
                   className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="relative w-28 h-24 flex-shrink-0">
-                      <Image
-                        src={product.image}
-                        alt={product.name}
-                        fill
-                        className="object-contain"
-                        sizes="112px"
-                      />
-                      <div className="absolute -top-2 -left-2 w-7 h-7 bg-red-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                        {index + 1}
-                      </div>
+                    <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-red-700 font-bold text-xl flex-shrink-0">
+                      {index + 1}
                     </div>
 
                     <div className="flex-1">

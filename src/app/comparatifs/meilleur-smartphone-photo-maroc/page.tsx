@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
-import Image from "next/image";
 import { ComparisonTable, AffiliateLink, MultiStoreButtons } from "@/components";
 import { generateArticleSchema, generateFAQSchema } from "@/lib/seo";
 
@@ -24,7 +23,6 @@ export const metadata: Metadata = {
 const products = [
   {
     name: "iPhone 15 Pro",
-    image: "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-pro.jpg",
     price: 14999,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=iphone+15+pro",
     badge: "Meilleure qualité vidéo",
@@ -50,7 +48,6 @@ const products = [
   },
   {
     name: "Samsung Galaxy S24 Ultra",
-    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g.jpg",
     price: 16499,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=samsung+galaxy+s24+ultra",
     badge: "Meilleur zoom",
@@ -76,7 +73,6 @@ const products = [
   },
   {
     name: "Google Pixel 8 Pro",
-    image: "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-8-pro.jpg",
     price: 11999,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=google+pixel+8+pro",
     badge: "Meilleur rapport qualité/prix",
@@ -239,17 +235,8 @@ export default function MeilleurSmartphonePhotoPage() {
                   className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="relative w-24 h-32 flex-shrink-0">
-                      <Image
-                        src={product.image}
-                        alt={product.name}
-                        fill
-                        className="object-contain"
-                        sizes="96px"
-                      />
-                      <div className="absolute -top-2 -left-2 w-7 h-7 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                        {index + 1}
-                      </div>
+                    <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-700 font-bold text-xl flex-shrink-0">
+                      {index + 1}
                     </div>
 
                     <div className="flex-1">

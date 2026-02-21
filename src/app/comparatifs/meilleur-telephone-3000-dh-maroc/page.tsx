@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
-import Image from "next/image";
 import { MultiStoreButtons } from "@/components";
 import { generateArticleSchema, generateFAQSchema } from "@/lib/seo";
 
@@ -40,7 +39,6 @@ const faqs = [
 const products = [
   {
     name: "Xiaomi Redmi Note 13 Pro",
-    image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-13-pro-4g.jpg",
     price: "2899 DH",
     rating: 4.8,
     pros: ["Écran AMOLED 120Hz", "Caméra 200MP", "Charge 67W", "Design premium"],
@@ -50,7 +48,6 @@ const products = [
   },
   {
     name: "Samsung Galaxy A35",
-    image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a35.jpg",
     price: "3199 DH",
     rating: 4.6,
     pros: ["One UI fluide", "5 ans de mises à jour", "Étanche IP67", "SAV Samsung Maroc"],
@@ -60,7 +57,6 @@ const products = [
   },
   {
     name: "Realme 12 Pro",
-    image: "https://fdn2.gsmarena.com/vv/bigpic/realme-12-pro.jpg",
     price: "2799 DH",
     rating: 4.5,
     pros: ["Design luxueux", "Écran incurvé", "Charge 67W", "Bonnes performances"],
@@ -136,17 +132,8 @@ export default function ComparatifPage() {
             {products.map((product, index) => (
               <div key={product.name} className="border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-4">
-                  <div className="relative w-24 h-32 flex-shrink-0">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-contain"
-                      sizes="96px"
-                    />
-                    <div className="absolute -top-2 -left-2 w-7 h-7 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                      {index + 1}
-                    </div>
+                  <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold text-xl flex-shrink-0">
+                    {index + 1}
                   </div>
                   
                   <div className="flex-1">

@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
-import Image from "next/image";
 import { ComparisonTable, AffiliateLink, MultiStoreButtons } from "@/components";
 import { generateArticleSchema, generateFAQSchema } from "@/lib/seo";
 
@@ -24,7 +23,6 @@ export const metadata: Metadata = {
 const products = [
   {
     name: "Anker 735 (Nano II 65W)",
-    image: "https://m.media-amazon.com/images/I/61dYrjHgPLL._AC_SL1500_.jpg",
     price: 449,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=anker+735+65w",
     badge: "Meilleur choix",
@@ -50,7 +48,6 @@ const products = [
   },
   {
     name: "Xiaomi 67W USB-C",
-    image: "https://m.media-amazon.com/images/I/51xR8a8C44L._AC_SL1200_.jpg",
     price: 249,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=xiaomi+chargeur+67w",
     badge: "Meilleur rapport qualité/prix",
@@ -76,7 +73,6 @@ const products = [
   },
   {
     name: "Baseus 100W GaN3",
-    image: "https://m.media-amazon.com/images/I/61hbUj55S3L._AC_SL1500_.jpg",
     price: 399,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=baseus+chargeur+100w",
     badge: "Le plus puissant",
@@ -102,7 +98,6 @@ const products = [
   },
   {
     name: "Anker 511 (Nano 30W)",
-    image: "https://m.media-amazon.com/images/I/51Uo7nb0GYL._AC_SL1500_.jpg",
     price: 199,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=anker+511+30w",
     badge: "Compact iPhone",
@@ -128,7 +123,6 @@ const products = [
   },
   {
     name: "UGREEN 65W 2 Ports",
-    image: "https://m.media-amazon.com/images/I/51KL2Mj7n8L._AC_SL1500_.jpg",
     price: 329,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=ugreen+chargeur+65w",
     badge: "Bon compromis",
@@ -320,17 +314,8 @@ export default function MeilleurChargeurRapidePage() {
                   className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="relative w-20 h-20 flex-shrink-0">
-                      <Image
-                        src={product.image}
-                        alt={product.name}
-                        fill
-                        className="object-contain"
-                        sizes="80px"
-                      />
-                      <div className="absolute -top-2 -left-2 w-7 h-7 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                        {index + 1}
-                      </div>
+                    <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-700 font-bold text-xl flex-shrink-0">
+                      {index + 1}
                     </div>
 
                     <div className="flex-1">

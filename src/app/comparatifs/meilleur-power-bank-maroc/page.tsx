@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
-import Image from "next/image";
 import { ComparisonTable, AffiliateLink, MultiStoreButtons } from "@/components";
 import { generateArticleSchema, generateFAQSchema } from "@/lib/seo";
 
@@ -24,7 +23,6 @@ export const metadata: Metadata = {
 const products = [
   {
     name: "Anker PowerCore 20000",
-    image: "https://m.media-amazon.com/images/I/61Xf3rz1rZL._AC_SL1500_.jpg",
     price: 399,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=anker+powercore+20000",
     badge: "Meilleur choix",
@@ -50,7 +48,6 @@ const products = [
   },
   {
     name: "Xiaomi Mi Power Bank 3",
-    image: "https://m.media-amazon.com/images/I/51KfwcL-dnL._AC_SL1200_.jpg",
     price: 299,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=xiaomi+power+bank+20000",
     badge: "Meilleur rapport qualité/prix",
@@ -76,7 +73,6 @@ const products = [
   },
   {
     name: "Baseus 30000mAh 65W",
-    image: "https://m.media-amazon.com/images/I/61JhUJdqzBL._AC_SL1500_.jpg",
     price: 549,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=baseus+power+bank+30000",
     badge: "Charge laptop",
@@ -102,7 +98,6 @@ const products = [
   },
   {
     name: "Xiaomi Redmi Power Bank 10000",
-    image: "https://m.media-amazon.com/images/I/41UuPdG4u+L._AC_SL1200_.jpg",
     price: 149,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=xiaomi+redmi+power+bank+10000",
     badge: "Budget compact",
@@ -128,7 +123,6 @@ const products = [
   },
   {
     name: "Anker 622 MagGo",
-    image: "https://m.media-amazon.com/images/I/61QKW0jkYsL._AC_SL1500_.jpg",
     price: 449,
     affiliateUrl: "https://www.jumia.ma/catalog/?q=anker+622+magsafe",
     badge: "iPhone MagSafe",
@@ -319,17 +313,8 @@ export default function MeilleurPowerBankPage() {
                   className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="relative w-20 h-20 flex-shrink-0">
-                      <Image
-                        src={product.image}
-                        alt={product.name}
-                        fill
-                        className="object-contain"
-                        sizes="80px"
-                      />
-                      <div className="absolute -top-2 -left-2 w-7 h-7 bg-teal-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                        {index + 1}
-                      </div>
+                    <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-700 font-bold text-xl flex-shrink-0">
+                      {index + 1}
                     </div>
 
                     <div className="flex-1">
